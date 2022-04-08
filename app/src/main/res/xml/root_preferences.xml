@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Tekstin muokkaus">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefEditable"
+            android:title="Salli tekstin muokkaus."
+            android:summaryOn="Muokattavissa"
+            android:summaryOff="Ei muokattavissa"/>
+        <ListPreference
+            android:defaultValue="18"
+            android:entries="@array/font_sizes"
+            android:entryValues="@array/font_sizes"
+            android:key="prefFont"
+            app:title="Valitse fontin koko:"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="18"
+            android:entries="@array/font_color"
+            android:entryValues="@array/font_color"
+            android:key="prefColor"
+            app:title="Valitse fontin väri:"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
